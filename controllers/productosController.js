@@ -133,7 +133,7 @@ exports.eliminarProducto = async (req, res, next) => {
             _id : req.params.idProductos
         });
 
-        if(req.file || producto.imagen){
+        if(req.file){
 
             const imagenAnterior = __dirname + `../../uploads/${producto.imagen}`;
 

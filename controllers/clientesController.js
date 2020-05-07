@@ -17,7 +17,7 @@ exports.nuevoCliente = async (req, res, next) => {
     } catch (error) {
 
         //SI EXISTE UN EEROR, MOSTRAR EL ERROR Y NEXT
-        console.log(error);
+        res.send(error);
         next();
     }
 
@@ -74,7 +74,7 @@ exports.actualizarCliente = async (req, res, next) => {
         //SE CREA EL JSON
         res.json(cliente);
     } catch (error) {
-        console.log(error);
+        res.send(error);
         next();
     }
 }
@@ -91,6 +91,7 @@ exports.eliminarCliente = async (req, res, next) => {
             mensaje : 'El cliente ha sido eliminado'
         })
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        next();
     }
 }

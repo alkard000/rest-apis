@@ -30,5 +30,8 @@ app.use(cors());
 //RUTAS DE LA APP
 app.use('/', routes());
 
+//CARPETA PUBLICA
+app.use(express.static('uploads'));//==> PARA QUE ENVIE IMAGENES AL FRONTEND
+
 //PUERTO
 app.listen(4000);
