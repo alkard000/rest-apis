@@ -64,10 +64,15 @@ module.exports = function(){
         productosController.eliminarProducto
     ); 
 
+    //BUSQUEDA DE PRODUCTOS EN EL FRONTEND
+    router.post('/productos/busqueda/:query',
+        productosController.buscarProductos
+    );
+
     /*********************************== CRUD DEL PEDIDO ==***************************************/
 
     //RUTAS PARA AGREGAR NUEVOS PEDIDOS
-    router.post('/pedidos', 
+    router.post('/pedidos/nuevo/:idUsuario', 
         pedidosController.nuevoPedido
     );
 
